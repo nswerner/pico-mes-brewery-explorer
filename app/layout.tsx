@@ -22,7 +22,7 @@ export default function RootLayout({
           <h1 className="z-10 mb-4 max-w-5xl w-full items-center font-mono text-2xl">
             {"Pico MES's Brewery Explorer"}
           </h1>
-          <div className="mb-4 grid text-center lg:max-w-5xl lg:w-full lg:mb-4 lg:grid-cols-4 lg:text-left">
+          <div className="mb-6 grid text-center lg:max-w-5xl lg:w-full lg:mb-6 lg:grid-cols-4 lg:text-left">
             <Link
               href={`/`}
               className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
@@ -71,7 +71,9 @@ export default function RootLayout({
               </p>
             </Link>
           </div>
-          {children}
+          <div className="border border-gray-200 rounded-lg p-4 min-h-[50vh] pt-8">
+            {children}
+          </div>
         </main>
       </body>
     </html>

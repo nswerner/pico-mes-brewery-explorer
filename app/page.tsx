@@ -34,7 +34,7 @@ export default function Home() {
         </p>
         <br />{' '}
         <a
-          href="https://github.com/nswerner/pico-mes"
+          href="https://github.com/nswerner/pico-mes-brewery-explorer"
           className="text-blue-500 hover:underline"
         >
           Check out the code here
