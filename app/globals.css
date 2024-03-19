@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.message-terminal {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 16px;
+  border: 1px solid #e5e5e5;
+  margin: 0 0 10px 0;
+  max-height: 80%;
+  min-height: 80%;
+  max-width: 100%;
+  min-width: 100%;
+  position: relative;
+  z-index: 1;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.message-history {
+  height: 60vh;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.message-row {
+  display: flex;
+  padding: 2px;
+  margin: 4px;
+}
+
+.message {
+  border-radius: 16px;
+  padding: 8px 12px;
+  max-width: 33%;
+  min-width: 10%;
+  display: inline-block;
+}
+
+.my-message {
+  background-color: rgb(40, 122, 199);
+  color: white;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.their-message {
+  background-color: rgb(240, 240, 240);
+  color: black;
+  min-width: 10%;
+  align-self: flex-start;
+  margin-right: auto;
+}
+
+.send-message-button {
+  width: 100px;
+  background-color: #3b82f6;
+  color: #fff;
+  font-weight: 700;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.25rem;
+}
