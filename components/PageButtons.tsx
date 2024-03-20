@@ -11,6 +11,10 @@ const enabledStlye =
 
 const disabledStyle = 'bg-gray-500 text-white font-bold py-2 px-4 rounded';
 
+const isBackButtonDisabled = (page: number) => page === 1;
+const isNextButtonDisabled = (currentResultLength: number) =>
+  currentResultLength < 10;
+
 const PageButtons: React.FC<PageButtonsProps> = ({
   page,
   setPage,
@@ -19,16 +23,20 @@ const PageButtons: React.FC<PageButtonsProps> = ({
   return (
     <div className="w-full flex justify-around mt-8">
       <button
-        disabled={page === 1}
-        className={page === 1 ? disabledStyle : enabledStlye}
+        disabled={isBackButtonDisabled(page)}
+        className={isBackButtonDisabled(page) ? disabledStyle : enabledStlye}
         onClick={() => setPage(page - 1)}
       >
         &lt;
       </button>
       <span>page {page}</span>
       <button
-        disabled={currentResultLength < 10}
-        className={currentResultLength < 10 ? disabledStyle : enabledStlye}
+        disabled={isNextButtonDisabled(currentResultLength)}
+        className={
+          isNextButtonDisabled(currentResultLength)
+            ? disabledStyle
+            : enabledStlye
+        }
         onClick={() => setPage(page + 1)}
       >
         &gt;

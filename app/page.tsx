@@ -28,7 +28,7 @@ export default function Home() {
         <br />
         <p>
           {`I'm seeking an opportunity to join your team where I can deliver impact and mentorship, as well as learn and grow as an engineer.
-          I excel when wearing many hats, and I'm excited to see what Edgevanta has to offer! 
+          I excel when wearing many hats, and I'm excited to see what Pico MES has to offer! 
           I'm confident that I can bring a unique perspective to the team and I'm eager to learn more about your company, team, and culture.
           `}
         </p>
