@@ -82,7 +82,7 @@ export default function RootLayout({
               </h2>
               <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
                 {
-                  'A look at my take on creating a performant table for a large query'
+                  'View my take on creating a performant table for a larger query'
                 }
               </p>
             </Link>

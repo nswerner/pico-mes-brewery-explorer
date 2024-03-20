@@ -13,15 +13,15 @@ export default function Home() {
         <p>
           {`Hello! My name is Nick Werner. I'm a builder, a tinkerer, and a problem solver. 
           With a background in software engineering and experience as a business owner,
-          I thrive on problem solving and creating solutions. I live in Encinitas, California with my girlfriend Heather,
+          I thrive on problem solving and creating solutions. I live in Encinitas, California, with my girlfriend Heather,
           dog Myrtle, and cat Dorian the Grey. In my free time, you can find me working out, binging a show, 
-          reading (mostly scifi), taking a walk, coding, cooking, trying a new restaurant, playing piano, or gaming!
+          reading (mostly sci-fi), taking a walk, coding, cooking, trying a new restaurant, playing piano, or gaming!
           `}
         </p>
         <br />
         <p>
           {`
-          Fun fact - the picture to the left was taken at Heather and my combined birthdays/housewarming. In order to attend,
+          Fun fact - Heather and I often combine our birthdays into an epic party! In the picture to the left, we're celebrating our birthdays/housewarming party. In order to attend,
           you had to wear an inflatable costume! We even had a bounce house - as you can tell, Myrtle loved it :D
         `}
         </p>

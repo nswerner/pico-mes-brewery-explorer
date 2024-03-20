@@ -23,7 +23,7 @@ const TypeFilter = ({
   return (
     <div>
       <label htmlFor="typeFilter" className="mr-4">
-        Filter by brewery type
+        Filter by brewery type:
       </label>
       <select
         id="typeFilter"

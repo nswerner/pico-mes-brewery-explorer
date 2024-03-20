@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import PageButtons from './PageButtons';
 import TypeFilter from './TypeFilter';
 
@@ -11,26 +11,18 @@ const PerformantTable = ({
 }) => {
   const [page, setPage] = useState(1);
   const [filter, setFilter] = useState('');
-  const [filteredBreweries, setFilteredBreweries] = useState(allBreweries);
-  const [selectedBreweries, setSelectedBreweries] = useState(
-    filteredBreweries.slice((page - 1) * 10, page * 10)
+
+  const selectedBreweries: { [k: string]: string }[] = useMemo(
+    () =>
+      allBreweries
+        .filter(({ brewery_type }) => (filter ? brewery_type === filter : true))
+        .slice((page - 1) * 10, page * 10),
+    [allBreweries, filter, page]
   );
-
-  useEffect(() => {
-    setFilteredBreweries(
-      allBreweries.filter(({ brewery_type }) =>
-        filter ? brewery_type === filter : true
-      )
-    );
-    setPage(1);
-  }, [allBreweries, filter]);
-
-  useEffect(() => {
-    setSelectedBreweries(filteredBreweries.slice((page - 1) * 10, page * 10));
-  }, [filteredBreweries, page]);
 
   const handleTypeFilterChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setFilter(e.target.value);
+    setPage(1);
   };
 
   const rowData = useMemo(() => {
@@ -67,7 +59,10 @@ const PerformantTable = ({
 
   return (
     <div>
-      <header className="flex flex-row justify-end mb-2">
+      <header className="flex flex-row justify-between mb-2">
+        <h2 className="text-2xl font-bold pb-6">
+          Large query, performant table
+        </h2>
         <TypeFilter handleTypeFilterChange={handleTypeFilterChange} />
       </header>
       <table className="border-collapse w-full">

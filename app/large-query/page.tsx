@@ -35,16 +35,7 @@ const LargeQueryPerformantTable = async () => {
       return acc;
     }, []);
 
-  return (
-    <div>
-      <header className="flex flex-row justify-between">
-        <h2 className="text-2xl font-bold pb-6">
-          Large query, performant table
-        </h2>
-      </header>
-      <PerformantTable allBreweries={groupedBreweriesSortedByName} />
-    </div>
-  );
+  return <PerformantTable allBreweries={groupedBreweriesSortedByName} />;
 };
 
 export default LargeQueryPerformantTable;
