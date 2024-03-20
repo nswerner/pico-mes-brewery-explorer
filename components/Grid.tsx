@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import ButtonWithDropdownFilter from './ButtonWithDropdownFilter';
 
 const Grid = ({ breweries }: { breweries: { [k: string]: string }[] }) => {
   return (
